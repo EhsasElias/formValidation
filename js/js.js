@@ -6,6 +6,7 @@ const numEl = document.querySelector('#num');
 const ageEl = document.querySelector('#age');
 const urlEl = document.querySelector('#url');
 const textareaEl = document.querySelector('#textarea');
+const butEl = document.querySelector('#btu');
 const form = document.querySelector('#signup');
 
 
@@ -24,6 +25,14 @@ form.addEventListener('submit', function (e) {
     isValidURL();
     isValidMesg();
     
+});
+
+butEl.addEventListener('click', function (e) {
+e.preventDefault();
+
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+
 });
 
 function checkLength(){
@@ -172,3 +181,4 @@ form.addEventListener('input', debounce(function (e) {
             break;
     }
 }));
+
